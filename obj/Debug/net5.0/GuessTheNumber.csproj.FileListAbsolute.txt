@@ -1,0 +1,15 @@
+/Users/nilavakazal/myProjects/GuessTheNumber/bin/Debug/net5.0/GuessTheNumber.deps.json
+/Users/nilavakazal/myProjects/GuessTheNumber/bin/Debug/net5.0/GuessTheNumber.runtimeconfig.json
+/Users/nilavakazal/myProjects/GuessTheNumber/bin/Debug/net5.0/GuessTheNumber.runtimeconfig.dev.json
+/Users/nilavakazal/myProjects/GuessTheNumber/bin/Debug/net5.0/GuessTheNumber.dll
+/Users/nilavakazal/myProjects/GuessTheNumber/bin/Debug/net5.0/ref/GuessTheNumber.dll
+/Users/nilavakazal/myProjects/GuessTheNumber/bin/Debug/net5.0/GuessTheNumber.pdb
+/Users/nilavakazal/myProjects/GuessTheNumber/obj/Debug/net5.0/GuessTheNumber.csproj.AssemblyReference.cache
+/Users/nilavakazal/myProjects/GuessTheNumber/obj/Debug/net5.0/GuessTheNumber.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nilavakazal/myProjects/GuessTheNumber/obj/Debug/net5.0/GuessTheNumber.AssemblyInfoInputs.cache
+/Users/nilavakazal/myProjects/GuessTheNumber/obj/Debug/net5.0/GuessTheNumber.AssemblyInfo.cs
+/Users/nilavakazal/myProjects/GuessTheNumber/obj/Debug/net5.0/GuessTheNumber.csproj.CoreCompileInputs.cache
+/Users/nilavakazal/myProjects/GuessTheNumber/obj/Debug/net5.0/GuessTheNumber.dll
+/Users/nilavakazal/myProjects/GuessTheNumber/obj/Debug/net5.0/ref/GuessTheNumber.dll
+/Users/nilavakazal/myProjects/GuessTheNumber/obj/Debug/net5.0/GuessTheNumber.pdb
+/Users/nilavakazal/myProjects/GuessTheNumber/obj/Debug/net5.0/GuessTheNumber.genruntimeconfig.cache
