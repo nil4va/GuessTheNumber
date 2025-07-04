@@ -7,22 +7,38 @@ namespace GuessTheNumber
         static void Main(string[] args)
         {
             var random = new Random();
-            int numberToGuess = random.Next(1, 101);
-            int attempts = 0;
 
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Welcome to the Guess the Number Game!");
-            Console.WriteLine("Guess the number between 1 and 100!");
             Console.ResetColor();
 
+            bool playAgain = true;
+            while (playAgain)
+            {
+                PlayGame(random);
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("Want to play again? (y/n)");
+                string answer = Console.ReadLine().ToLower();
+                playAgain = answer == "y";
+            }
 
-            string input = Console.ReadLine();
+            Console.WriteLine("Thanks for playing! Goodbye!");
+        }
+
+        static void PlayGame(Random random)
+        {
+            int numberToGuess = random.Next(1, 101);
+            int attempts = 0;
+
+            Console.WriteLine("Guess the number between 1 and 100!");
 
             while (true)
             {
+                Console.ResetColor();
+                string input = Console.ReadLine();
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
 
-                if (int.TryParse(input, out int guessedNumber) && guessedNumber > 1 && guessedNumber < 100)
+                if (int.TryParse(input, out int guessedNumber) && guessedNumber >= 1 && guessedNumber <= 100)
                 {
                     attempts++;
 
@@ -47,10 +63,7 @@ namespace GuessTheNumber
                 }
 
                 Console.ResetColor();
-                input = Console.ReadLine();
-
             }
-
         }
     }
 }
