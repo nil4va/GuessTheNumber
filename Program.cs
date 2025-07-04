@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace GuessTheNumber
 {
@@ -7,7 +9,7 @@ namespace GuessTheNumber
         static void Main(string[] args)
         {
             var random = new Random();
-
+            List<int> scoreboard = [];
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Welcome to the Guess the Number Game!");
             Console.ResetColor();
@@ -15,8 +17,15 @@ namespace GuessTheNumber
             bool playAgain = true;
             while (playAgain)
             {
-                PlayGame(random);
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                scoreboard.Add(PlayGame(random));
+
+                var top5 = scoreboard.OrderBy(x => x).Take(5)
+                .Select((score, index) => $"{index + 1}. {score} attempts");
+
+                Console.ForegroundColor = ConsoleColor.DarkBlue;
+                Console.WriteLine($"⭐️HIGHSCORE⭐️\n{string.Join("\n", top5)}");
+
+                Console.ResetColor();
                 Console.WriteLine("Want to play again? (y/n)");
                 string answer = Console.ReadLine().ToLower();
                 playAgain = answer == "y";
@@ -25,7 +34,7 @@ namespace GuessTheNumber
             Console.WriteLine("Thanks for playing! Goodbye!");
         }
 
-        static void PlayGame(Random random)
+        static int PlayGame(Random random)
         {
             int numberToGuess = random.Next(1, 101);
             int attempts = 0;
@@ -63,7 +72,9 @@ namespace GuessTheNumber
                 }
 
                 Console.ResetColor();
+
             }
+            return attempts;
         }
     }
 }
